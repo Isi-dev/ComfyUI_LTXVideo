@@ -648,14 +648,14 @@ class STGGuiderAdvancedNode:
             stg_scale_list = [float(s.strip()) for s in stg_scale_values.split(",")]
             stg_rescale_list = [float(s.strip()) for s in stg_rescale_values.split(",")]
             stg_layers_indices_list = self.parse_stg_layers_indices(stg_layers_indices)
-        print("Using preset: ", preset)
-        print("Skip steps sigma threshold: ", skip_steps_sigma_threshold)
-        print("Cfg star rescale: ", cfg_star_rescale)
-        print("Sigma list: ", sigma_list)
-        print("Cfg list: ", cfg_list)
-        print("Stg scale list: ", stg_scale_list)
-        print("Stg rescale list: ", stg_rescale_list)
-        print("Stg layers indices list: ", stg_layers_indices_list)
+        # print("Using preset: ", preset)
+        # print("Skip steps sigma threshold: ", skip_steps_sigma_threshold)
+        # print("Cfg star rescale: ", cfg_star_rescale)
+        # print("Sigma list: ", sigma_list)
+        # print("Cfg list: ", cfg_list)
+        # print("Stg scale list: ", stg_scale_list)
+        # print("Stg rescale list: ", stg_rescale_list)
+        # print("Stg layers indices list: ", stg_layers_indices_list)
 
         guider = STGGuiderAdvanced(
             model,
