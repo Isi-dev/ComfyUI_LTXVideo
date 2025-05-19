@@ -101,7 +101,7 @@ class LTXVBaseSampler:
                 .movedim(1, -1)
                 .clamp(0, 1)
             )
-            print("optional_cond_images shape", optional_cond_images.shape)
+            # print("optional_cond_images shape", optional_cond_images.shape)
             optional_cond_images = comfy_extras.nodes_lt.LTXVPreprocess().preprocess(
                 optional_cond_images, crf
             )[0]
@@ -175,13 +175,13 @@ class LTXVBaseSampler:
         )
 
         # Clean up guides if image conditioning was used
-        print("before guide crop", denoised_output_latents["samples"].shape)
+        # print("before guide crop", denoised_output_latents["samples"].shape)
         positive, negative, denoised_output_latents = LTXVCropGuides().crop(
             positive=positive,
             negative=negative,
             latent=denoised_output_latents,
         )
-        print("after guide crop", denoised_output_latents["samples"].shape)
+        # print("after guide crop", denoised_output_latents["samples"].shape)
 
         return (denoised_output_latents,)
 
